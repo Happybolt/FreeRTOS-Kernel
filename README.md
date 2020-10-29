@@ -1,3 +1,23 @@
+## Getting started for NRF52840
+add to prj source:
+    <folder Name="freertos">
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/croutine.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/event_groups.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/list.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/queue.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/stream_buffer.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/tasks.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/timers.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/portable/CMSIS/nrf52/port_cmsis.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/portable/CMSIS/nrf52/port_cmsis_systick.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/portable/MemMang/heap_4.c" />
+      <file file_name="$(DIR_PRJ)/FreeRTOS-Kernel/portable/GCC/nrf52/port.c" />
+    </folder>
+    include:
+    $(DIR_PRJ)/FreeRTOS-Kernel/portable/CMSIS/nrf52;
+    $(DIR_PRJ)/FreeRTOS-Kernel/portable/GCC/nrf52;
+    $(DIR_PRJ)/FreeRTOS-Kernel/include";
+    
 ## Getting started
 This repository contains FreeRTOS kernel source/header files and kernel ports only. This repository is referenced as a submodule in [FreeRTOS/FreeRTOS](https://github.com/FreeRTOS/FreeRTOS) repository, which contains pre-configured demo application projects under ```FreeRTOS/Demo``` directory. 
 
